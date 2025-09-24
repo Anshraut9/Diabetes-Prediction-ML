@@ -1,76 +1,72 @@
-# 🩺 Diabetes Prediction using Ensemble Learning (Voting Classifier)
+## 🩺 Diabetes Prediction using Ensemble Learning
 
-This project is a **Machine Learning-based predictive model** that determines whether an individual is diabetic or not, based on their health-related features. The project incorporates multiple ML algorithms including **SVM**, **Random Forest**, **Decision Tree**, and **KNN**, and combines their outputs using a **Voting Classifier (Soft Voting)** for enhanced accuracy and generalization.
-
----
+This project is a Machine Learning-based predictive system that determines whether an individual is diabetic or not, based on health-related features. The solution explores multiple ML algorithms and finally combines Random Forest and XGBoost into an Ensemble Model with hyperparameter tuning to achieve higher accuracy and robustness.
 
 ## 📂 Dataset Description
 
-The dataset used is a modified and extended version of the **PIMA Indians Diabetes Dataset**, consisting of **10,000+ patient records** with the following attributes:
+The dataset is an extended version of the PIMA Indians Diabetes Dataset, containing 10,000+ patient records with the following attributes:
 
-### 🔹 Features:
+🔹 Features
 
-- `gender` (Male/Female/Other)
-- `age` (in years)
-- `hypertension` (0: No, 1: Yes)
-- `heart_disease` (0: No, 1: Yes)
-- `smoking_history` (categorical: never, current, former, etc.)
-- `bmi` (Body Mass Index)
-- `HbA1c_level` (Glycated Hemoglobin)
-- `blood_glucose_level` (random glucose reading in mg/dL)
-- `diabetes` (Target: 0 = Non-diabetic, 1 = Diabetic)
-
-This dataset provides a realistic base for training and testing a robust classification model.
-
----
+gender (Male/Female/Other)
+age (in years)
+hypertension (0 = No, 1 = Yes)
+heart_disease (0 = No, 1 = Yes)
+smoking_history (categorical: never, current, former, etc.)
+bmi (Body Mass Index)
+HbA1c_level (Glycated Hemoglobin)
+blood_glucose_level (mg/dL)
+diabetes (Target: 0 = Non-diabetic, 1 = Diabetic)
+This dataset provides a realistic foundation for training and evaluating predictive healthcare models.
 
 ## 🛠️ Project Features
+✅ Data Preprocessing
+Handled missing values and inconsistencies
+Encoded categorical variables using Label Encoding
+Applied feature scaling with StandardScaler
 
-### ✅ Data Preprocessing
-- Handled missing values and inconsistencies
-- Converted categorical data using Label Encoding
-- Feature scaling applied using `StandardScaler`
+## 📊 Exploratory Data Analysis (EDA)
+Visualized class imbalance
+Correlation heatmap of features
+Distribution analysis for BMI, HbA1c, and glucose levels
 
-### 📊 Exploratory Data Analysis (EDA)
-- Class distribution and imbalance visualization
-- Heatmap showing correlations between features
-- Distribution plots for numeric attributes (e.g., BMI, glucose level)
+## 🤖 Machine Learning Models Implemented
+Support Vector Machine (SVM)
+Decision Tree Classifier
+Random Forest Classifier
+K-Nearest Neighbors (KNN)
+XGBoost Classifier
+Each model was trained individually and evaluated using accuracy, precision, recall, and F1-score.
 
-### 🤖 Machine Learning Models Implemented
-- **Support Vector Machine (SVM)**
-- **Random Forest Classifier**
-- **Decision Tree Classifier**
-- **K-Nearest Neighbors (KNN)**
+## 🧠 Ensemble Learning
+Built a Voting Classifier combining Random Forest and XGBoost
+Used Soft Voting to aggregate probabilistic outputs
+Reduced overfitting and improved generalization compared to single models
 
-Each model is trained individually and evaluated based on accuracy and classification metrics.
-
-### 🧠 Ensemble Learning: Voting Classifier
-- A **Soft Voting Classifier** is built using the top-performing models
-- Combines probabilistic predictions from multiple models to output the final prediction
-- Enhances performance by reducing overfitting and bias
-
-### 📈 Evaluation Metrics
-- Accuracy (training and testing)
-- Confusion Matrix
-- Classification Report (Precision, Recall, F1-Score)
-- Visual comparison of model performances
-
----
+## 📈 Evaluation Metrics
+Accuracy (train & test)
+Confusion Matrix
+Classification Report (Precision, Recall, F1-Score)
+Performance comparison charts for all models
 
 ## 🧪 Libraries and Technologies Used
 
-- **Python**
-- **NumPy** – For numerical operations
-- **Pandas** – For data manipulation and handling
-- **Matplotlib & Seaborn** – For visualization
-- **Scikit-learn** – For model building, preprocessing, tuning, and evaluation
-  
----
+Python
+NumPy – Numerical operations
+Pandas – Data handling
+Matplotlib & Seaborn – Visualization
+Scikit-learn – Preprocessing, model building, and evaluation
+XGBoost – Gradient boosting algorithm
 
 ## 🧰 Hyperparameter Tuning
 
-- `GridSearchCV` is used for optimizing model parameters:
-  - Example: Tuning `n_neighbors` for KNN, `max_depth` for Decision Tree, etc.
-- Helps in improving model performance and generalization
+Applied GridSearchCV for fine-tuning model parameters
+Example: n_estimators, max_depth, min_samples_split for Random Forest
+Example: learning_rate, n_estimators, max_depth for XGBoost
+Improved model performance and ensured better generalization
+
+---
+
+
 
 ---
